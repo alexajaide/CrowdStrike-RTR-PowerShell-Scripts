@@ -15,7 +15,7 @@ Usage:
     1. Retrieve the session ID using:
         quser
     2. Run the script in the CrowdStrike RTR console:
-        runscript -CloudFile "user-session-investigation-rtr" -CommandLine "<SessionID or Username>"
+        runscript -CloudFile "user-session-details" -CommandLine "<SessionID or Username>"
     3. To terminate a session after review:
         logoff <SessionID>
 
@@ -138,3 +138,4 @@ if (Test-Path $userPath) {
 } else {
     Write-Output "User path $userPath does not exist or is inaccessible."
 }
+
