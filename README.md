@@ -1,21 +1,28 @@
 # CrowdStrike-RTR-PowerShell-Scripts
 
-This repository contains PowerShell scripts designed for **CrowdStrike Falcon RTR** to demonstrate endpoint investigation and remediation workflows.
+This repository contains **PowerShell scripts designed for CrowdStrike Falcon RTR**, demonstrating endpoint investigation and remediation workflows.  
+
+---
 
 ## Scripts Overview
 
 | Script | Description |
 |--------|-------------|
-| `user-session-details.ps1` | Retrieves detailed information about a user session, including session ID, SID, and user profile. |
-| `host-details.ps1` | Collects host-level details for a machine, such as system info and configuration data. |
-| `process-file-delete.ps1` | Reads a list of running processes and files, then deletes specified processes and associated files. |
-| `process-file-preserve.ps1` | Reads a list of running processes and files, deletes specified processes while preserving specified files. |
+| `user-session-details.ps1` | Retrieves detailed information about a user session, including session ID, SID, user profile, running processes, and recent file activity. |
+| `host-details.ps1` | Collects host-level information, including users, sessions, processes, services, event logs, scheduled tasks, network connections, installed software, and command history. |
+| `file-process-delete.ps1` | Identifies processes using a specified file and optionally terminates those processes and deletes the file. |
+| `file-process-preserve.ps1` | Identifies processes using a specified file and optionally terminates those processes while preserving the file as Read-Only. |
+
+---
 
 ## Usage
 
-Each script includes instructions in the comments on how to run it in the CrowdStrike RTR console. Parameters typically include usernames, session IDs, or file paths.
+All scripts are designed to run in the **CrowdStrike Falcon RTR console**. Each script includes instructions in the comments. Common parameters include usernames, session IDs, or file paths.
 
-Example (user session details):
+### Examples
+
+**Neutral CommandLine Input:**
 ```powershell
-runscript -CloudFile "user-session-details" -CommandLine "<Username or SessionID>"
+runscript -CloudFile "<file-name>" -CommandLine "<optional/mandatory arguments>"
+
 
