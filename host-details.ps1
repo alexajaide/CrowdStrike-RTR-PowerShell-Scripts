@@ -17,7 +17,7 @@ Description:
 
 Usage:
     Run this script in the CrowdStrike RTR console:
-        runscript -CloudFile "host-details-rtr"
+        runscript -CloudFile "host-details"
 
 Purpose:
     Supports endpoint investigation and remediation workflows within
@@ -242,3 +242,4 @@ try {
 
 # === SCRIPT COMPLETION ===
 Write-Output "`nScript completed at: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+
